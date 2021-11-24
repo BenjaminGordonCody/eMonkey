@@ -52,7 +52,7 @@ async function getOrderForm() {
   return orderForm;
 }
 
-const mainIF = () => {
+const mainIF = (wiggles) => {
   inquirer
     .prompt([
       {
@@ -77,7 +77,7 @@ const mainIF = () => {
         default:
           break;
       }
-      mainIF();
+      mainIF(wiggles);
     });
 };
 
@@ -97,7 +97,7 @@ async function main() {
 
   console.clear();
   wiggles.refresh();
-  mainIF();
+  mainIF(wiggles);
 }
 
 main();
