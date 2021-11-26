@@ -4,12 +4,17 @@ let { health, happy, nourished, educated } = require("./boundaries.js");
 let { Pet } = require("./PetClass.js");
 
 // TODO
+// refactor recursive "mainIF" to use whilst/gameloop instead.
 // - add dance/play
-// - play consequences/feels - makes happier, healthier, less nourished
+// - add consequences/feelings for play - makes happier, healthier, less nourished
 // - add read (include array of things that could be read)
-// -add set/get for read
+// -add consequences/feelings for read
 //   -- makes happier
 // - implement death.
+// implement "time" somehow, stats changing, time before evolution etc
+// -implement evolutions ala pokemon for each pet species
+// decide on boundaries for stats (boundaries.js)
+//remove vomit function (it was only there for testing)
 
 async function getOrderForm() {
   let promise = await inquirer
